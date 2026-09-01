@@ -31,6 +31,7 @@ body{
 .cap{padding:12px 14px 13px; font-size:13.5px; line-height:1.75; color:var(--muted)}
 .cap b{display:block; color:var(--blue-deep); font-size:14.5px; margin-bottom:2px}
 .cap b::first-letter{color:var(--orange); font-size:1.15em}
+.hint{display:none}
 
 /* 手機：改成左右滑動的卡片列，一次看一段，影片反而比三欄擠在一起大得多 */
 @media (max-width:640px){
@@ -40,4 +41,5 @@ body{
   }
   .card{flex:0 0 88%; scroll-snap-align:center}
   .cap{font-size:13px}
+  .hint{display:block; font-size:12px; color:#8A9099; padding:6px 2px 0; letter-spacing:.04em}
 }
