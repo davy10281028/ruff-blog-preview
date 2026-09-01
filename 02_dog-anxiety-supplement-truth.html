@@ -33,16 +33,18 @@
 
 <style>
   :root{
-    --blue:#1F4FD8;
-    --blue-deep:#0E2A6B;
-    --blue-soft:#EAF0FF;
-    --blue-line:#C9D8FF;
+    --blue:#0041B3;
+    --blue-deep:#002A6E;
+    --blue-soft:#E7EEFA;
+    --blue-line:#BFD1EC;
+    --orange:#FF7F00;
+    --orange-soft:#FFF1E3;
     --cream:#FFFCF6;
     --ink:#141A24;
     --muted:#5B6675;
     --grey-ink:#8A9099;
     --green:#0F7A4F;
-    --amber:#B26A00;
+    --amber:#C05F00;
     --red:#C0392B;
     --radius:18px;
     --maxw:760px;
@@ -84,11 +86,11 @@
   p{margin:0 0 18px}
   a{color:var(--blue); text-decoration:underline; text-underline-offset:3px}
   strong{font-weight:800}
-  mark{background:linear-gradient(transparent 58%, #FFE9B8 58%); color:inherit}
+  mark{background:linear-gradient(transparent 58%, rgba(255,127,0,.30) 58%); color:inherit}
   ul.plain{padding-left:22px}
   ul.plain li{margin-bottom:8px}
 
-  .stance{margin:34px 0; padding:26px 26px 22px; border-radius:var(--radius); background:#fff; border:1px solid var(--blue-line); box-shadow:0 10px 30px -22px rgba(15,42,107,.45)}
+  .stance{margin:34px 0; padding:26px 26px 22px; border-radius:var(--radius); background:#fff; border:1px solid var(--blue-line); box-shadow:0 10px 30px -22px rgba(0,42,110,.45)}
   .stance .title{font-weight:900; color:var(--blue-deep); margin:0 0 10px; font-size:17px}
   .stance p{margin:0 0 12px; font-size:16px}
   .stance p:last-child{margin:0}
@@ -98,10 +100,10 @@
     margin:34px 0; padding:24px 24px 20px; border-radius:var(--radius);
     background:var(--ink); color:#fff;
   }
-  .formula .fh{font-size:12.5px; letter-spacing:.16em; font-weight:800; color:#9FB6FF; margin:0 0 14px}
+  .formula .fh{font-size:12.5px; letter-spacing:.16em; font-weight:800; color:#8FB2FF; margin:0 0 14px}
   .formula ol{margin:0; padding-left:22px; font-size:16px; line-height:1.85}
   .formula li{margin-bottom:8px}
-  .formula li b{color:#FFD98A}
+  .formula li b{color:#FF9E40}
   .formula .out{margin:16px 0 0; padding-top:14px; border-top:1px solid rgba(255,255,255,.18); font-weight:900; font-size:16.5px}
 
   /* ---- 兩欄對照 ---- */
@@ -109,7 +111,7 @@
   @media(max-width:640px){ .cols{grid-template-columns:1fr} }
   .card{background:#fff; border:1px solid var(--blue-line); border-radius:16px; padding:20px 20px 14px}
   .card.ok{border-color:#BFE6D2; background:#F6FCF9}
-  .card.watch{border-color:#F3D9B0; background:#FFFBF3}
+  .card.watch{border-color:#F5CFA0; background:#FFF7EE}
   .card h4{margin:0 0 12px; font-size:15.5px; font-weight:900; display:flex; align-items:center; gap:8px}
   .card.ok h4{color:var(--green)}
   .card.watch h4{color:var(--amber)}
@@ -126,11 +128,11 @@
   table{width:100%; min-width:640px; border-collapse:separate; border-spacing:0; font-size:14.5px; background:#fff; border-radius:14px; overflow:hidden; border:1px solid var(--blue-line)}
   th,td{padding:14px 15px; text-align:left; vertical-align:top; line-height:1.7}
   thead th{background:var(--blue-deep); color:#fff; font-weight:800; font-size:13.5px; letter-spacing:.04em}
-  tbody tr+tr td{border-top:1px solid #EDF1FA}
+  tbody tr+tr td{border-top:1px solid #E4EBF7}
   td.ing{font-weight:800; color:var(--blue-deep); white-space:nowrap}
   .lv{display:inline-block; padding:2px 9px; border-radius:999px; font-size:12px; font-weight:800; white-space:nowrap}
   .lv-a{background:#E4F5EC; color:#0F7A4F}
-  .lv-b{background:#FFF4E0; color:#B26A00}
+  .lv-b{background:#FFF1E0; color:#C05F00}
   .lv-c{background:#F1F2F4; color:#6B7280}
 
   /* ---- 紅旗 ---- */
@@ -140,7 +142,7 @@
   .redflag li{padding-left:24px; position:relative; margin-bottom:9px}
   .redflag li::before{content:"！"; position:absolute; left:2px; top:0; color:var(--red); font-weight:900}
 
-  blockquote{margin:38px 0; padding:28px 28px; border-radius:var(--radius); background:linear-gradient(135deg,#2A5CE8,var(--blue-deep)); color:#fff; font-size:clamp(18px,3vw,23px); font-weight:800; line-height:1.65}
+  blockquote{margin:38px 0; padding:28px 28px; border-radius:var(--radius); background:linear-gradient(135deg,#0D53CC,var(--blue-deep)); color:#fff; font-size:clamp(18px,3vw,23px); font-weight:800; line-height:1.65}
   blockquote p{margin:0}
   blockquote .sig{display:block; margin-top:14px; font-size:13px; font-weight:600; opacity:.8; letter-spacing:.1em}
 
@@ -152,7 +154,7 @@
   .cta{margin:52px 0 0; padding:32px 28px; border-radius:var(--radius); text-align:center; background:var(--blue-deep); color:#fff}
   .cta h4{margin:0 0 8px; font-size:clamp(19px,3.2vw,24px); font-weight:900}
   .cta p{margin:0 0 20px; font-size:15px; opacity:.88}
-  .btn{display:inline-block; background:#fff; color:var(--blue-deep); font-weight:900; padding:14px 30px; border-radius:999px; text-decoration:none; font-size:16px}
+  .btn{display:inline-block; background:var(--orange); color:#fff; font-weight:900; padding:14px 30px; border-radius:999px; text-decoration:none; font-size:16px; box-shadow:0 10px 24px -12px rgba(255,127,0,.7)}
   .btn.ghost{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.55); margin-left:8px}
   @media(max-width:520px){ .btn.ghost{margin:10px 0 0} }
 

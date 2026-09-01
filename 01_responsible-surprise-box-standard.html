@@ -33,10 +33,12 @@
 
 <style>
   :root{
-    --blue:#1F4FD8;
-    --blue-deep:#0E2A6B;
-    --blue-soft:#EAF0FF;
-    --blue-line:#C9D8FF;
+    --blue:#0041B3;
+    --blue-deep:#002A6E;
+    --blue-soft:#E7EEFA;
+    --blue-line:#BFD1EC;
+    --orange:#FF7F00;
+    --orange-soft:#FFF1E3;
     --cream:#FFFCF6;
     --ink:#141A24;
     --muted:#5B6675;
@@ -104,14 +106,14 @@
   p{margin:0 0 18px}
   a{color:var(--blue); text-decoration:underline; text-underline-offset:3px}
   strong{font-weight:800}
-  mark{background:linear-gradient(transparent 58%, #FFE9B8 58%); color:inherit}
+  mark{background:linear-gradient(transparent 58%, rgba(255,127,0,.30) 58%); color:inherit}
   ul.plain{padding-left:22px}
   ul.plain li{margin-bottom:9px}
 
   /* ---- 主題引言卡 ---- */
   .theme-hero{
     margin:34px 0; border-radius:var(--radius); overflow:hidden;
-    background:radial-gradient(130% 150% at 12% 0%, #3A6BF5 0%, var(--blue) 42%, var(--blue-deep) 100%);
+    background:radial-gradient(130% 150% at 12% 0%, #1A62E0 0%, var(--blue) 42%, var(--blue-deep) 100%);
     color:#fff; padding:32px 28px 28px; text-align:center;
   }
   .theme-hero .x{font-size:clamp(13px,2.4vw,15px); font-weight:800; letter-spacing:.1em; opacity:.9; margin:0 0 14px}
@@ -147,7 +149,7 @@
   }
   .teaser .tag{
     display:inline-block; font-size:11.5px; font-weight:900; letter-spacing:.14em;
-    background:var(--blue); color:#fff; padding:4px 11px; border-radius:6px; margin-bottom:12px;
+    background:var(--orange); color:#fff; padding:4px 11px; border-radius:6px; margin-bottom:12px;
   }
   .teaser h4{margin:0 0 8px; font-size:19px; font-weight:900; color:var(--blue-deep)}
   .teaser p{margin:0; font-size:15.5px; color:var(--blue-deep); line-height:1.85; opacity:.92}
@@ -156,8 +158,8 @@
   .feat{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:24px 0 10px}
   @media(max-width:600px){ .feat{grid-template-columns:1fr} }
   .feat .f{
-    background:#fff; border:1px solid var(--blue-line); border-radius:14px;
-    padding:18px 16px; text-align:center;
+    background:#fff; border:1px solid var(--blue-line); border-top:3px solid var(--orange);
+    border-radius:14px; padding:18px 16px; text-align:center;
   }
   .feat .f .ico{font-size:26px; line-height:1; display:block; margin-bottom:8px}
   .feat .f b{display:block; font-size:16px; color:var(--blue-deep); margin-bottom:4px}
@@ -179,6 +181,7 @@
   .shot img, .shot video{display:block; width:100%; height:auto; background:#0E1420}
   .shot figcaption{padding:12px 14px 13px; font-size:13.5px; line-height:1.75; color:var(--muted)}
   .shot figcaption b{display:block; color:var(--blue-deep); font-size:14.5px; margin-bottom:2px}
+  .shot figcaption b::first-letter{color:var(--orange); font-size:1.15em}
   .proc-note{font-size:13px; color:var(--grey-ink); margin:14px 2px 0; line-height:1.75}
 
   /* ---- 內容物清單 ---- */
@@ -195,11 +198,11 @@
   .vs-banner{
     position:relative; overflow:hidden; border-radius:var(--radius);
     background:#F4F5F7; color:var(--ink);
-    box-shadow:0 24px 50px -30px rgba(15,42,107,.5);
+    box-shadow:0 24px 50px -30px rgba(0,42,110,.5);
   }
   .vs-banner::before{
     content:""; position:absolute; top:0; right:0; bottom:0; left:0;
-    background:linear-gradient(135deg,#2A5CE8 0%, var(--blue) 46%, var(--blue-deep) 100%);
+    background:linear-gradient(135deg,#0D53CC 0%, var(--blue) 46%, var(--blue-deep) 100%);
     clip-path:polygon(56% 0, 100% 0, 100% 100%, 44% 100%);
   }
   .vs-grid{
@@ -218,7 +221,7 @@
     width:58px; height:58px; border-radius:50%; background:#fff;
     display:flex; align-items:center; justify-content:center;
     font-size:22px; font-weight:900; color:var(--ink); letter-spacing:-.03em;
-    box-shadow:0 8px 22px -10px rgba(10,20,45,.55); user-select:none;
+    box-shadow:0 8px 22px -10px rgba(0,20,55,.55); user-select:none;
   }
   .vs-label{
     display:inline-block; font-size:12px; font-weight:800; letter-spacing:.14em;
@@ -244,14 +247,14 @@
   .vs-left .vs-list{color:#8A9099}
   .vs-left .ic{color:#BCC2C9}
   .vs-right .vs-list{color:rgba(255,255,255,.97)}
-  .vs-right .ic{color:#8CF0C4}
+  .vs-right .ic{color:#FFB066}
   .vs-formula{
     position:relative; z-index:2; margin:0; padding:18px 22px;
     background:var(--ink); color:#fff; font-size:clamp(14px,2.4vw,18px);
     font-weight:900; text-align:center; letter-spacing:.03em; line-height:1.6;
   }
   .vs-formula s{color:#FF9A9A; text-decoration-thickness:2px; margin:0 2px}
-  .vs-formula b{color:#FFD98A; margin-left:4px}
+  .vs-formula b{color:#FF9E40; margin-left:4px}
   .vs-caption{font-size:13px; color:var(--grey-ink); margin:10px 2px 0; line-height:1.75}
 
   @media(max-width:700px){
@@ -264,20 +267,9 @@
     .vs-list{font-size:14px}
   }
 
-  /* ---- 表格 ---- */
-  .table-wrap{overflow-x:auto; margin:26px 0 10px; -webkit-overflow-scrolling:touch}
-  table{width:100%; min-width:600px; border-collapse:separate; border-spacing:0; font-size:14.5px; background:#fff; border-radius:14px; overflow:hidden; border:1px solid var(--blue-line)}
-  th,td{padding:14px 15px; text-align:left; vertical-align:top; line-height:1.7}
-  thead th{background:var(--blue-deep); color:#fff; font-weight:800; font-size:13.5px; letter-spacing:.04em}
-  tbody tr+tr td{border-top:1px solid #EDF1FA}
-  tbody tr:nth-child(3){background:var(--blue-soft)}
-  td.lv{font-weight:900; color:var(--blue-deep); white-space:nowrap}
-  .yes{color:#0F7A4F; font-weight:800}
-  .no{color:#C0392B; font-weight:800}
-
   /* ---- 製程步驟 ---- */
   .steps{list-style:none; margin:24px 0; background:#fff; border:1px solid var(--blue-line); border-radius:var(--radius); padding:8px 24px}
-  .steps li{display:flex; gap:14px; padding:14px 0; border-bottom:1px dashed #E4EAF6; font-size:15.5px; line-height:1.75}
+  .steps li{display:flex; gap:14px; padding:14px 0; border-bottom:1px dashed #DCE6F5; font-size:15.5px; line-height:1.75}
   .steps li:last-child{border:0}
   .steps .st{
     flex:0 0 auto; font-size:11.5px; font-weight:900; letter-spacing:.1em; color:var(--blue);
@@ -288,7 +280,7 @@
   /* ---- Pull quote ---- */
   blockquote{
     margin:38px 0; padding:26px 28px; border-radius:var(--radius);
-    background:linear-gradient(135deg,#2A5CE8,var(--blue-deep)); color:#fff;
+    background:linear-gradient(135deg,#0D53CC,var(--blue-deep)); color:#fff;
     font-size:clamp(18px,3vw,22px); font-weight:800; line-height:1.65;
   }
   blockquote p{margin:0}
@@ -309,8 +301,9 @@
   .cta h4{margin:0 0 8px; font-size:clamp(19px,3.2vw,24px); font-weight:900}
   .cta p{margin:0 0 20px; font-size:15px; opacity:.88}
   .btn{
-    display:inline-block; background:#fff; color:var(--blue-deep); font-weight:900;
+    display:inline-block; background:var(--orange); color:#fff; font-weight:900;
     padding:14px 30px; border-radius:999px; text-decoration:none; font-size:16px;
+    box-shadow:0 10px 24px -12px rgba(255,127,0,.7);
   }
   .btn.ghost{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.55); margin-left:8px}
   @media(max-width:520px){ .btn.ghost{margin:10px 0 0} }
@@ -332,7 +325,7 @@
     <li><b style="color:#B32424;">⚠ 客製化的說法保留餘地：</b>第 2 節寫的是「<b>九月這一彈是第一次做到完全客製化，之後會盡可能延續但不做絕對承諾</b>」。<b>請勿改成「我們的玩具一直都是全客製化」</b>，那會變成對過往商品的不實陳述，也會綁住之後每一個月。文末已加一行免責：後續月份規格依主題與生產條件調整，不構成對未來商品的保證。</li>
     <li><b>已處理：</b>修版次數已填入（八次）；材質／尺寸說明與零食品項待填已刪除。</li>
     <li><b style="color:#B32424;">⚠ 單盒體驗的價格請核對：</b>「NT$989 起」取自官網訂閱方案頁面，非本次新增資訊。<b>若現行價格已調整，請直接改寫該數字或改成「詳見商品頁」。</b>單盒體驗已改寫為常設方案（每月都有、可自用可送禮），不再寫成「九月限定」。</li>
-    <li><b>紅框 <span class="ph">【待填】</span> 尚有 1 處：</b>盒內容物的「當月主題周邊」。本月若無周邊請把該 <code>&lt;li&gt;</code> 整列刪除。</li>
+    <li><b>待填欄位已全部清空</b>（本篇無紅框殘留）。另已移除「當月主題周邊」列與「『獨家』的三個層級」對照表。</li>
     <li><b>產線影片說明已補：</b>clip-3 為雷射裁切、clip-1 與 clip-2 為繡花。<b>版面按實際工序排序（裁切 → 繡花），與檔名順序不同</b>，對應關係寫在該區的 HTML 註解裡。</li>
     <li><b>用詞：</b>廠商原話為「激光裁剪」，對外文案改用台灣說法「<b>雷射裁切</b>」。請確認全通路統一。</li>
     <li><b>絕不可寫入本文：</b>採購價、抽成 %、訂閱主人數、vacanza 會員數、寄賣／買斷條件等商務條款，皆為內部資訊。</li>
@@ -387,7 +380,7 @@
 
 <p>這不是一句行銷話術，而是一個可以驗證的事實：你在蝦皮、淘寶、任何一間寵物店都搜不到同一顆。因為它沒有出現在任何工廠的目錄上，它是為了「Everyday with you」這個主題，從零開版做出來的。</p>
 
-<h3>盒子裡還有什麼</h3>
+<h3>這一盒裡有什麼</h3>
 
 <ul class="items">
   <li>
@@ -397,10 +390,6 @@
   <li>
     <b>MIT 天然原肉零食</b>
     <span class="sub">台灣製造原肉，可依毛孩檔案避開過敏原，邊拍邊流口水的那部分。</span>
-  </li>
-  <li>
-    <b>當月主題周邊</b>
-    <span class="sub"><span class="ph">【待填：本月是否另有周邊；若無請整列刪除】</span></span>
   </li>
 </ul>
 
@@ -456,38 +445,9 @@
   <figcaption class="vs-caption">※ 本圖描述的是產業內兩種常見的製造模式，不指涉特定品牌。差別在於：沒有開版打樣的階段，就沒有把關的節點；同一組版型被多家品牌共用，撞款只是時間問題。<strong>判斷方式很簡單：能不能拿出開版打樣的過程紀錄。</strong></figcaption>
 </figure>
 
-<h3>「獨家」的三個層級</h3>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr><th>層級</th><th>實際做法</th><th>從零到出貨</th><th>會不會撞款</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="lv">L1<br>貼牌</td>
-      <td>直接採購工廠現成公版，加上品牌繡標／吊牌</td>
-      <td>最快 1–2 週</td>
-      <td class="no">會</td>
-    </tr>
-    <tr>
-      <td class="lv">L2<br>公版微調</td>
-      <td>沿用既有版型，改配色、改尺寸、換布料</td>
-      <td>約 3–6 週</td>
-      <td class="no">會（同版型）</td>
-    </tr>
-    <tr>
-      <td class="lv">L3<br>全原創</td>
-      <td>主題概念 → 設計稿 → 開版 → 打樣修版 → 毛孩試玩 → 量產驗收</td>
-      <td>約 3–6 個月</td>
-      <td class="yes">不會</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<p class="vs-caption">九月的聯名拍立得玩具走的是 L3。這也是為什麼這個主題要提前好幾個月開始跑。</p>
-
 <h3>這台拍立得，是這樣長出來的</h3>
+
+<p>那我們就照這個標準來，把這一顆從第一天到出貨的過程整段攤開。</p>
 
 <ul class="steps">
   <li><span class="st">STEP 01</span><span><b>先決定這個月要說什麼</b>：主題定了「Everyday with you」，才回頭想「那玩具應該是什麼」。答案是相機。不是先找到玩具、再編一個故事。</span></li>
@@ -496,7 +456,7 @@
   <li><span class="st">STEP 04</span><span><b>修版，一共八次</b>：調縫線位置、改填充密度、換耐咬布料，讓它被拉扯的時候不會第一天就開線。<strong>每一版都重新測耐咬度、車縫強度與整體質感呈現</strong>，反覆測試到它經得起一隻狗真正的力氣，我們才敢把它放進盒子裡。</span></li>
   <li><span class="st">STEP 05</span><span><b>毛孩試玩</b>：玩具好不好，不是設計師說了算，是狗說了算。會不會想咬第二次，是唯一的驗收標準。</span></li>
   <li><span class="st">STEP 06</span><span><b>量產與逐件驗收</b>：布料、填充、繡線送檢；出貨前人工逐件檢查，瑕疵直接淘汰。</span></li>
-  <li><span class="st">STEP 07</span><span><b>限量、絕版</b>：這個主題只做這一次。九月結束，版型就收起來了。</span></li>
+  <li><span class="st">STEP 07</span><span><b>限量生產</b>：這一彈做完的量就是這次的全部，版型也會先收起來。往後若有機會再讓他出來走走，應該也會是不太一樣的樣子了。</span></li>
 </ul>
 
 <h3>不用相信我們，看照片</h3>
