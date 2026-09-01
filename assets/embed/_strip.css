@@ -40,10 +40,7 @@ body{
     display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch; padding-bottom:6px;
   }
-  .strip,.strip.two,.strip.three{align-items:stretch; flex:1 1 auto; min-height:0}
-  .card{flex:0 0 88%; scroll-snap-align:center; display:flex; flex-direction:column}
-  .media{flex:1 1 auto; min-height:0; display:flex}
-  .media video,.media img{height:100%; max-height:none}
+  .card{flex:0 0 88%; scroll-snap-align:center}
   .cap{font-size:13px}
   .hint{display:block; font-size:12px; color:#8A9099; padding:6px 2px 0; letter-spacing:.04em}
 }
