@@ -20,8 +20,8 @@ body{
   font:14.5px/1.75 'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif;
   letter-spacing:.02em; -webkit-text-size-adjust:100%;
 }
-.vs{display:grid; grid-template-columns:1fr 64px 1fr; align-items:center; padding:1px}
-.panel{border-radius:14px; padding:24px 20px}
+.vs{display:grid; grid-template-columns:1fr 64px 1fr; align-items:stretch; padding:1px}
+.panel{border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; justify-content:center}
 .panel.plain{background:var(--grey-bg)}
 .panel.brand{background:var(--blue); color:#fff}
 .chip{display:inline-block; font-size:12px; letter-spacing:.12em; font-weight:700; padding:4px 10px; margin:0 0 12px}
@@ -47,6 +47,12 @@ body{
   .mid{padding:10px 0; position:relative}
   .mid span{background:#fff; padding:0 14px; font-size:19px; position:relative; z-index:1}
   .mid .bar{display:block; position:absolute; left:6px; right:6px; top:50%; height:1px; background:#DDE3EC; z-index:0}
+}
+/* 很窄的機型（iPhone SE 之類）再收一級，確保不會被固定高度切到 */
+@media (max-width:359px){
+  .panel{padding:14px}
+  .head{font-size:15px}
+  .list{font-size:12.5px; line-height:1.72}
 }
 </style>
 </head>
