@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>公版貼牌盒 vs. ruff. 全原創盒</title>
+<style>
+/* 桌機左右對照、手機上下堆疊。SHOPLINE 內文沒辦法用 media query，
+   所以這塊改成 iframe 嵌入頁，CSS 由我們自己控制。 */
+:root{
+  --blue:#0041B3; --blue-deep:#002A6E;
+  --grey-bg:#F4F5F7; --grey-chip:#E1E4E8; --grey-ink:#6B7280;
+  --grey-head:#79818B; --grey-body:#8A9099;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:#fff; color:#141A24;
+  font:14.5px/1.75 'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif;
+  letter-spacing:.02em; -webkit-text-size-adjust:100%;
+}
+.vs{display:grid; grid-template-columns:1fr 64px 1fr; align-items:stretch; padding:1px}
+.panel{border-radius:14px; padding:24px 20px}
+.panel.plain{background:var(--grey-bg)}
+.panel.brand{background:var(--blue); color:#fff}
+.chip{display:inline-block; font-size:12px; letter-spacing:.12em; font-weight:700; padding:4px 10px; margin:0 0 12px}
+.plain .chip{background:var(--grey-chip); color:var(--grey-ink)}
+.brand .chip{background:var(--blue-deep); color:#fff}
+.head{font-size:18px; line-height:1.6; font-weight:700; margin:0 0 14px}
+.plain .head{color:var(--grey-head)}
+.brand .head{color:#fff}
+.mark{background:#fff; color:var(--blue-deep); padding:1px 7px}
+.list{font-size:14.5px; line-height:2; margin:0}
+.plain .list{color:var(--grey-body)}
+.brand .list{color:#fff}
+.mid{display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700; color:#5B6675}
+.mid span{display:block}
+.mid .bar{display:none}
+
+@media (max-width:640px){
+  .vs{grid-template-columns:1fr; gap:0}
+  .panel{padding:20px 18px}
+  .head{font-size:17px}
+  .list{font-size:14px; line-height:1.95}
+  .mid{padding:10px 0; position:relative}
+  .mid span{background:#fff; padding:0 14px; font-size:19px; position:relative; z-index:1}
+  .mid .bar{display:block; position:absolute; left:6px; right:6px; top:50%; height:1px; background:#DDE3EC; z-index:0}
+}
+</style>
+</head>
+<body>
+<div class="vs">
+  <div class="panel plain">
+    <p style="margin:0"><span class="chip">公版貼牌盒</span></p>
+    <p class="head">從供應商目錄挑現成品，縫上自己的 Logo</p>
+    <p class="list">✕　採購批發現成公版<br>✕　沒有開版、沒有打樣<br>✕　版型多家共用，容易撞款<br>✕　材質衛生靠供應商說法<br>✕　網路上隨時買得到</p>
+  </div>
+  <div class="mid"><i class="bar"></i><span>VS</span></div>
+  <div class="panel brand">
+    <p style="margin:0"><span class="chip">ruff. 全原創盒</span></p>
+    <p class="head">先有主題與原稿，才有<span class="mark">屬於這個月</span>的玩具</p>
+    <p class="list">✓　主題概念先行，原創設計<br>✓　自有版型，開版打樣修版<br>✓　布料、填充、繡線送檢<br>✓　出貨前人工逐件驗收<br>✓　限量生產，售完絕版</p>
+  </div>
+</div>
+</body>
+</html>
