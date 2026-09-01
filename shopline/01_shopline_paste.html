@@ -1,0 +1,313 @@
+<!-- =====================================================================
+  ruff. 藍夫｜9/1 部落格文章　ruff. x vacanza 聯名限定 第一彈
+  貼法：SHOPLINE 後台 > 部落格 > 新增文章 > 內文編輯器切換到「原始碼／HTML」
+        模式，把以下全部（含 <style>）複製貼上。
+  標題與 SEO 欄位請照 01_seo_fields.txt 另外填。
+  圖片影片目前指向預覽站，正式上線請換成 SHOPLINE 媒體庫網址。
+===================================================================== -->
+<style>
+  .ruff-post{--blue:#0041B3; --blue-deep:#002A6E; --blue-soft:#E7EEFA; --blue-line:#BFD1EC; --orange:#FF7F00; --orange-soft:#FFF1E3; --cream:#FFFCF6; --ink:#141A24; --muted:#5B6675; --grey-bg:#F2F3F5; --grey-ink:#8A9099; --radius:18px; --maxw:760px;}
+  .ruff-post *{box-sizing:border-box}
+  .ruff-post{-webkit-text-size-adjust:100%}
+  .ruff-post{margin:0; background:var(--cream); color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.95; letter-spacing:.02em;}
+  .ruff-post{max-width:var(--maxw); margin:0 auto; padding:0 22px 96px}
+  .ruff-post header.post-head{padding:48px 0 8px}
+  .ruff-post .kicker{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; letter-spacing:.16em; color:var(--blue); text-transform:uppercase;}
+  .ruff-post .kicker::before{content:""; width:26px; height:2px; background:var(--blue)}
+  .ruff-post h1{font-size:clamp(28px,5.2vw,42px); line-height:1.32; margin:18px 0 14px; letter-spacing:-.01em; font-weight:900;}
+  .ruff-post h1 em{font-style:normal; color:var(--blue); background:linear-gradient(transparent 62%, var(--blue-soft) 62%)}
+  .ruff-post .lede{font-size:18.5px; color:var(--muted); margin:0 0 22px}
+  .ruff-post .meta{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; font-size:13.5px; color:var(--grey-ink); padding:14px 0 0; border-top:1px solid var(--blue-line);}
+  .ruff-post .meta .tag{background:var(--blue-soft); color:var(--blue-deep); padding:3px 10px; border-radius:999px; font-weight:700}
+  .ruff-post h2{font-size:clamp(21px,3.6vw,27px); line-height:1.45; margin:56px 0 14px; font-weight:900; letter-spacing:-.005em;}
+  .ruff-post h2 .num{display:inline-block; min-width:34px; height:34px; line-height:34px; text-align:center; background:var(--blue); color:#fff; border-radius:10px; font-size:16px; margin-right:10px; vertical-align:2px;}
+  .ruff-post h3{font-size:18.5px; margin:32px 0 8px; font-weight:800; color:var(--blue-deep)}
+  .ruff-post p{margin:0 0 18px}
+  .ruff-post a{color:var(--blue); text-decoration:underline; text-underline-offset:3px}
+  .ruff-post strong{font-weight:800}
+  .ruff-post mark{background:linear-gradient(transparent 58%, rgba(255,127,0,.30) 58%); color:inherit}
+  .ruff-post ul.plain{padding-left:22px}
+  .ruff-post ul.plain li{margin-bottom:9px}
+  .ruff-post .theme-hero{margin:34px 0; border-radius:var(--radius); overflow:hidden; background:radial-gradient(130% 150% at 12% 0%, #1A62E0 0%, var(--blue) 42%, var(--blue-deep) 100%); color:#fff; padding:32px 28px 28px; text-align:center;}
+  .ruff-post .theme-hero .x{font-size:clamp(13px,2.4vw,15px); font-weight:800; letter-spacing:.1em; opacity:.9; margin:0 0 14px}
+  .ruff-post .theme-hero .x span{opacity:.55; margin:0 7px}
+  .ruff-post .theme-hero .en{font-size:clamp(26px,5.6vw,42px); font-weight:900; letter-spacing:.01em; line-height:1.15; margin:0 0 10px;}
+  .ruff-post .theme-hero .zh{font-size:clamp(15px,2.8vw,18px); font-weight:800; margin:0 0 16px; opacity:.95}
+  .ruff-post .theme-hero .date{display:inline-block; font-size:13px; font-weight:800; letter-spacing:.08em; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.45); padding:5px 14px; border-radius:999px;}
+  .ruff-post .paw{margin:30px 0; padding:22px 24px 20px; border-radius:var(--radius); background:#fff; border:1px solid var(--blue-line); border-left:5px solid var(--blue); font-size:16px; line-height:1.9;}
+  .ruff-post .paw .who{display:block; font-size:12px; font-weight:900; letter-spacing:.12em; color:var(--blue); margin-bottom:10px;}
+  .ruff-post .paw p{margin:0 0 12px}
+  .ruff-post .paw p:last-child{margin:0}
+  .ruff-post .feat{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:24px 0 10px}
+  .ruff-post .feat .f{background:#fff; border:1px solid var(--blue-line); border-top:3px solid var(--orange); border-radius:14px; padding:18px 16px; text-align:center;}
+  .ruff-post .feat .f .ico{font-size:26px; line-height:1; display:block; margin-bottom:8px}
+  .ruff-post .feat .f b{display:block; font-size:16px; color:var(--blue-deep); margin-bottom:4px}
+  .ruff-post .feat .f span.d{font-size:13.5px; color:var(--muted); line-height:1.7}
+  .ruff-post .proc{margin:34px 0 8px}
+  .ruff-post .proc-head{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:12px; font-weight:900; letter-spacing:.14em; color:var(--blue); margin-bottom:14px;}
+  .ruff-post .proc-head::before{content:""; width:24px; height:2px; background:var(--blue)}
+  .ruff-post .proc-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .ruff-post .proc-grid.three{grid-template-columns:repeat(3,1fr)}
+  .ruff-post .shot{margin:0; background:#fff; border:1px solid var(--blue-line); border-radius:16px; overflow:hidden}
+  .ruff-post .shot img, .ruff-post .shot video{display:block; width:100%; height:auto; background:#0E1420}
+  .ruff-post .shot figcaption{padding:12px 14px 13px; font-size:13.5px; line-height:1.75; color:var(--muted)}
+  .ruff-post .shot figcaption b{display:block; color:var(--blue-deep); font-size:14.5px; margin-bottom:2px}
+  .ruff-post .shot figcaption b::first-letter{color:var(--orange); font-size:1.15em}
+  .ruff-post .proc-note{font-size:13px; color:var(--grey-ink); margin:14px 2px 0; line-height:1.75}
+  .ruff-post .vs{margin:40px 0 8px}
+  .ruff-post .vs-banner{position:relative; overflow:hidden; border-radius:var(--radius); background:#F4F5F7; color:var(--ink); box-shadow:0 24px 50px -30px rgba(0,42,110,.5);}
+  .ruff-post .vs-banner::before{content:""; position:absolute; top:0; right:0; bottom:0; left:0; background:linear-gradient(135deg,#0D53CC 0%, var(--blue) 46%, var(--blue-deep) 100%); clip-path:polygon(56% 0, 100% 0, 100% 100%, 44% 100%);}
+  .ruff-post .vs-grid{position:relative; z-index:2; display:grid; grid-template-columns:1fr 92px 1fr; align-items:start; padding:36px 30px 40px;}
+  .ruff-post .vs-side{position:relative; min-width:0}
+  .ruff-post .vs-left{grid-column:1; grid-row:1; padding-right:4px}
+  .ruff-post .vs-right{grid-column:3; grid-row:1; padding-left:4px; color:#fff}
+  .ruff-post .vs-gutter{grid-column:2; grid-row:1; align-self:center; justify-self:center; display:flex; align-items:center; justify-content:center;}
+  .ruff-post .vs-mark{width:58px; height:58px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:900; color:var(--ink); letter-spacing:-.03em; box-shadow:0 8px 22px -10px rgba(0,20,55,.55); user-select:none;}
+  .ruff-post .vs-label{display:inline-block; font-size:12px; font-weight:800; letter-spacing:.14em; padding:4px 11px; border-radius:6px; margin-bottom:14px; white-space:nowrap;}
+  .ruff-post .vs-left .vs-label{background:#E1E4E8; color:#6B7280}
+  .ruff-post .vs-right .vs-label{background:rgba(255,255,255,.18); color:#fff; border:1px solid rgba(255,255,255,.5)}
+  .ruff-post .vs-head{font-size:clamp(15.5px,2.4vw,19px); font-weight:900; line-height:1.62; margin:0 0 16px; text-wrap:balance;}
+  .ruff-post .vs-left .vs-head{color:#79818B}
+  .ruff-post .vs-right .vs-head{color:#fff}
+  .ruff-post .vs-right .vs-head u{text-decoration:none; background:#fff; color:var(--blue-deep); padding:1px 7px; border-radius:5px; box-decoration-break:clone;}
+  .ruff-post .vs-list{list-style:none; margin:0; padding:0; font-size:14.5px; line-height:1.6}
+  .ruff-post .vs-list li{display:flex; gap:8px; margin-bottom:11px; align-items:baseline}
+  .ruff-post .vs-list li:last-child{margin-bottom:0}
+  .ruff-post .vs-list .ic{flex:0 0 14px; font-weight:900; font-size:13px}
+  .ruff-post .vs-list .tx{flex:1 1 auto; min-width:0}
+  .ruff-post .vs-left .vs-list{color:#8A9099}
+  .ruff-post .vs-left .ic{color:#BCC2C9}
+  .ruff-post .vs-right .vs-list{color:rgba(255,255,255,.97)}
+  .ruff-post .vs-right .ic{color:#FFB066}
+  .ruff-post .vs-formula{position:relative; z-index:2; margin:0; padding:18px 22px; background:var(--ink); color:#fff; font-size:clamp(14px,2.4vw,18px); font-weight:900; text-align:center; letter-spacing:.03em; line-height:1.6;}
+  .ruff-post .vs-formula s{color:#FF9A9A; text-decoration-thickness:2px; margin:0 2px}
+  .ruff-post .vs-formula b{color:#FF9E40; margin-left:4px}
+  .ruff-post .vs-caption{font-size:13px; color:var(--grey-ink); margin:10px 2px 0; line-height:1.75}
+  .ruff-post .steps{list-style:none; margin:24px 0; background:#fff; border:1px solid var(--blue-line); border-radius:var(--radius); padding:8px 24px}
+  .ruff-post .steps li{display:flex; gap:14px; padding:14px 0; border-bottom:1px dashed #DCE6F5; font-size:15.5px; line-height:1.75}
+  .ruff-post .steps li:last-child{border:0}
+  .ruff-post .steps .st{flex:0 0 auto; font-size:11.5px; font-weight:900; letter-spacing:.1em; color:var(--blue); background:var(--blue-soft); padding:3px 9px; border-radius:6px; height:fit-content; margin-top:4px;}
+  .ruff-post .steps b{color:var(--blue-deep)}
+  .ruff-post blockquote{margin:38px 0; padding:26px 28px; border-radius:var(--radius); background:linear-gradient(135deg,#0D53CC,var(--blue-deep)); color:#fff; font-size:clamp(18px,3vw,22px); font-weight:800; line-height:1.65;}
+  .ruff-post blockquote p{margin:0}
+  .ruff-post blockquote .sig{display:block; margin-top:14px; font-size:13px; font-weight:600; opacity:.8; letter-spacing:.1em}
+  .ruff-post .buy{display:grid; gap:14px; margin:26px 0 10px}
+  .ruff-post .buy .opt{background:#fff; border:1px solid var(--blue-line); border-radius:16px; padding:20px 22px}
+  .ruff-post .buy .opt .pill{display:inline-block; font-size:11.5px; font-weight:900; letter-spacing:.1em; background:var(--blue-soft); color:var(--blue); padding:3px 10px; border-radius:999px; margin-bottom:10px}
+  .ruff-post .buy .opt h4{margin:0 0 6px; font-size:17px; font-weight:900; color:var(--blue-deep)}
+  .ruff-post .buy .opt p{margin:0; font-size:15px; color:var(--muted); line-height:1.8}
+  .ruff-post .cta{margin:52px 0 0; padding:32px 28px; border-radius:var(--radius); text-align:center; background:var(--blue-deep); color:#fff;}
+  .ruff-post .cta h4{margin:0 0 8px; font-size:clamp(19px,3.2vw,24px); font-weight:900}
+  .ruff-post .cta p{margin:0 0 20px; font-size:15px; opacity:.88}
+  .ruff-post .btn{display:inline-block; background:var(--orange); color:#fff; font-weight:900; padding:14px 30px; border-radius:999px; text-decoration:none; font-size:16px; box-shadow:0 10px 24px -12px rgba(255,127,0,.7);}
+  .ruff-post .btn.ghost{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.55); margin-left:8px}
+  .ruff-post .footnote{margin-top:44px; padding-top:20px; border-top:1px solid var(--blue-line); font-size:13.5px; color:var(--grey-ink); line-height:1.85}
+  .ruff-post .divider{height:1px; background:var(--blue-line); margin:52px 0; border:0}
+  @media(max-width:600px){
+  .ruff-post .feat{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+  .ruff-post .proc-grid, .ruff-post .proc-grid.three{grid-template-columns:1fr}
+  }
+  @media(max-width:700px){
+  .ruff-post .vs-banner::before{clip-path:polygon(0 51%, 100% 45%, 100% 100%, 0 100%)}
+  .ruff-post .vs-grid{grid-template-columns:1fr; grid-template-rows:auto 54px auto; padding:26px 22px 30px}
+  .ruff-post .vs-left{grid-column:1; grid-row:1; padding-right:0}
+  .ruff-post .vs-gutter{grid-column:1; grid-row:2}
+  .ruff-post .vs-right{grid-column:1; grid-row:3; padding-left:0}
+  .ruff-post .vs-mark{width:50px; height:50px; font-size:19px}
+  .ruff-post .vs-list{font-size:14px}
+  }
+  @media(max-width:520px){
+  .ruff-post .btn.ghost{margin:10px 0 0}
+  }
+</style>
+
+<div class="ruff-post">
+<header class="post-head">
+  <span class="kicker">每月獨家主題 ｜ 九月 · 第一彈</span>
+  <h1>你的專屬攝影師<br><em>已上線</em> 📸</h1>
+  <p class="lede">ruff. × vacanza 聯名限定 第一彈｜Everyday with you：一台獨家開發訂製、外面買不到的聯名拍立得玩具，正式交到最萌攝影師手上。</p>
+  <div class="meta">
+    <span class="tag">ruff. 藍夫</span>
+    <span>2026 年 9 月 1 日</span>
+    <span>閱讀時間 約 5 分鐘</span>
+  </div>
+</header>
+
+<div class="theme-hero">
+  <p class="x">ruff. 藍夫 <span>×</span> vacanza</p>
+  <p class="en">Everyday with you</p>
+  <p class="zh">第一彈 · 聯名拍立得玩具 ｜ 有他在的每一天，都值得被拍下來</p>
+  <span class="date">第一彈 現正登場 ｜ 第二彈 09 / 16</span>
+</div>
+
+<div class="paw">
+  <span class="who">🐾 來自最萌攝影師的上班第一天</span>
+  <p>開始上班的第一天，主管發給我一台超可愛的「ruff. × vacanza」聯名拍立得 📷</p>
+  <p>太好了！平常在家裡就有在接受專業訓練（？）的我，這次終於可以好好大顯身手啦～</p>
+  <p>而且這期的寵壞盒裡，還裝滿了讓我邊拍邊流口水的超讚好料。</p>
+</div>
+
+<p>「Everyday with you」講的是「人寵陪伴」與「生活即假期」，不用等到出遠門，只要他在旁邊，平常的一天就已經是假期了。</p>
+
+<p>這個主題會被選中的原因很直接：它跟 ruff. 想講的是同一件事。我們每個月把藍色的盒子送到你家，本來就是為了在普通的星期三製造一場小小的節日。<strong>所以這次不是「找一個品牌來聯名」，而是兩邊剛好在講同一句話。</strong></p>
+
+<p>而既然主題是「把有他的日常拍下來」，那這個月的玩具就不能只是一顆玩具。</p>
+
+<h2><span class="num">1</span>第一彈：ruff. × vacanza 聯名拍立得玩具</h2>
+
+<p>它看起來是一台拍立得，實際上是一顆<strong>三種玩法一次滿足</strong>的玩具。設計的時候我們一直在問同一個問題：狗會怎麼對待一台相機？答案是：他會咬、會甩、會叫你陪他搶。所以這三件事我們都設計進去了。</p>
+
+<div class="feat">
+  <div class="f"><span class="ico">🔊</span><b>按壓出聲</b><span class="d">咬下去會叫，模擬按快門的手感，他會一直想再按一次</span></div>
+  <div class="f"><span class="ico">📸</span><b>擺拍造型</b><span class="d">立體相機外型，叼在嘴上就是一張照片，拍起來很有戲</span></div>
+  <div class="f"><span class="ico">🤜</span><b>可以拔河</b><span class="d">結構耐拉，能陪你玩互動拉扯，不是只能放在旁邊當擺飾</span></div>
+</div>
+
+<p>最重要的一點，是它<strong>#獨家開發訂製、#外面買不到</strong>。</p>
+
+<p>這不是一句行銷話術，而是一個可以驗證的事實：你在蝦皮、淘寶、任何一間寵物店都搜不到同一顆。因為它沒有出現在任何工廠的目錄上，它是專門為了「Everyday with you」這個主題生出來的。</p>
+
+<h2><span class="num">2</span>玩具這件事，我們從這個月開始走比較慢的那條路</h2>
+
+<p>老實說，「獨家設計」這四個字在寵物產業幾乎沒有門檻。一種做法是打開供應商目錄、挑一顆現成的、縫上自己的繡標；另一種是先有主題，再把玩具從零開版長出來。<strong>兩種都可以合法寫上「獨家」，但你打開盒子的那一刻感受得到差別。</strong></p>
+
+<p><strong>九月這一彈，是 ruff. 第一次把整顆玩具做到完全客製化。</strong>從主題概念、設計稿、開版、打樣到修版，全部為這一盒重新跑一遍，<mark>光是修版就來回了八次</mark>。這也是為什麼我們敢寫「外面買不到」，而不只是寫「獨家」。</p>
+
+<p>接下來，我們會盡可能把這個標準延續下去。這裡不打算把它講成一個絕對的承諾，有些月份會受到主題性質、工期或合作條件的影響，我們也不想為了漂亮的口號去硬湊。<mark>但方向已經定了：能做到全客製化的，我們就不會退回去挑公版。</mark></p>
+
+<figure class="vs">
+  <div class="vs-banner">
+    <div class="vs-grid">
+      <div class="vs-side vs-left">
+        <span class="vs-label">公版貼牌盒</span>
+        <p class="vs-head">從供應商目錄挑現成品，<br>縫上自己的 Logo</p>
+        <ul class="vs-list">
+          <li><span class="ic">✕</span><span class="tx">採購批發現成公版</span></li>
+          <li><span class="ic">✕</span><span class="tx">沒有開版、沒有打樣</span></li>
+          <li><span class="ic">✕</span><span class="tx">版型多家共用，容易撞款</span></li>
+          <li><span class="ic">✕</span><span class="tx">材質衛生靠供應商說法</span></li>
+          <li><span class="ic">✕</span><span class="tx">網路上隨時買得到</span></li>
+        </ul>
+      </div>
+
+      <div class="vs-gutter">
+        <div class="vs-mark" aria-hidden="true">VS</div>
+      </div>
+
+      <div class="vs-side vs-right">
+        <span class="vs-label">ruff. 全原創盒</span>
+        <p class="vs-head">先有主題與原稿，<br>才有<u>屬於這個月</u>的玩具</p>
+        <ul class="vs-list">
+          <li><span class="ic">✓</span><span class="tx">主題概念先行，原創設計</span></li>
+          <li><span class="ic">✓</span><span class="tx">自有版型，開版打樣修版</span></li>
+          <li><span class="ic">✓</span><span class="tx">布料、填充、繡線送檢</span></li>
+          <li><span class="ic">✓</span><span class="tx">出貨前人工逐件驗收</span></li>
+          <li><span class="ic">✓</span><span class="tx">限量生產，售完絕版</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="vs-formula">現成公版 ＋ 縫上 Logo ＝ <s>客製化</s><b>貼牌</b></p>
+  </div>
+  <figcaption class="vs-caption">※ 本圖描述的是產業內兩種常見的製造模式，不指涉特定品牌。差別在於：沒有開版打樣的階段，就沒有把關的節點；同一組版型被多家品牌共用，撞款只是時間問題。<strong>判斷方式很簡單：能不能拿出開版打樣的過程紀錄。</strong></figcaption>
+</figure>
+
+<h3>這台拍立得，是這樣長出來的</h3>
+
+<p>那我們就照這個標準來，把這一顆從第一天到出貨的過程整段攤開。</p>
+
+<ul class="steps">
+  <li><span class="st">STEP 01</span><span><b>先決定這個月要說什麼</b>：主題定了「Everyday with you」，才回頭想「那玩具應該是什麼」。答案是相機。不是先找到玩具、再編一個故事。</span></li>
+  <li><span class="st">STEP 02</span><span><b>畫成設計稿</b>：機身比例、鏡頭要不要凸出、發聲器放哪一層、拔河的時候力量從哪裡走，都在紙上先吵完一輪。</span></li>
+  <li><span class="st">STEP 03</span><span><b>開版與第一次打樣</b>：把平面變立體。這一段最花時間，而且第一版通常都不夠好。</span></li>
+  <li><span class="st">STEP 04</span><span><b>修版，一共八次</b>：調縫線位置、改填充密度、換耐咬布料，讓它被拉扯的時候不會第一天就開線。<strong>每一版都重新測耐咬度、車縫強度與整體質感呈現</strong>，反覆測試到它經得起一隻狗真正的力氣，我們才敢把它放進盒子裡。</span></li>
+  <li><span class="st">STEP 05</span><span><b>毛孩試玩</b>：玩具好不好，不是設計師說了算，是狗說了算。會不會想咬第二次，是唯一的驗收標準。</span></li>
+  <li><span class="st">STEP 06</span><span><b>量產與逐件驗收</b>：布料、填充、繡線送檢；出貨前人工逐件檢查，瑕疵直接淘汰。</span></li>
+  <li><span class="st">STEP 07</span><span><b>限量生產</b>：這一彈做完的量就是這次的全部，版型也會先收起來。往後若有機會再讓他出來走走，應該也會是不太一樣的樣子了。</span></li>
+</ul>
+
+<h3>不用相信我們，看照片</h3>
+
+<p>上面那七步聽起來都很好，問題是誰都可以這樣寫。所以我們把工廠傳回來的產線照片直接放在這裡。</p>
+
+<div class="proc">
+  <p class="proc-head">產線實拍 ｜ 雷射裁切與繡花</p>
+  <div class="proc-grid">
+    <figure class="shot">
+      <img src="https://davy10281028.github.io/ruff-blog-preview/assets/proto-embroidery-machine.jpg" alt="電腦繡花機正在絨布上車出拍立得的鏡頭與彩色條紋" loading="lazy">
+      <figcaption><b>十二針電腦繡花機上機</b>每一條彩色線都是這台機器一針一針車出來的。畫面裡同時可以看到兩個階段：右邊已經完成鏡頭與四色條紋，左邊還在車第一組線。</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="https://davy10281028.github.io/ruff-blog-preview/assets/proto-embroidery-detail.jpg" alt="完成的貼布繡鏡頭、閃光燈與四色條紋特寫" loading="lazy">
+      <figcaption><b>繡好的機身面料特寫</b>黑色鏡頭是貼布繡（把布剪形後車縫收邊），橘色方塊是閃光燈，藍橘黃藍四色條紋是拍立得的經典彩虹。這塊布不會出現在任何工廠的公版目錄上。</figcaption>
+    </figure>
+  </div>
+
+  <p class="proc-note" style="margin:22px 2px 12px; color:var(--muted); font-size:14.5px">而在繡花之前，得先有能裁的形狀。三段產線影片，按實際工序排：</p>
+
+  <div class="proc-grid three">
+    <!-- 來源檔：proto-clip-3.mp4（原 809873851.204640）雷射裁切 -->
+    <figure class="shot">
+      <video src="https://davy10281028.github.io/ruff-blog-preview/assets/proto-clip-3.mp4" controls preload="metadata" playsinline></video>
+      <figcaption><b>① 雷射裁切</b>用雷射把絨布裁出精準的形狀，切口同時封邊，比刀模裁更不容易鬆線。這就是「開版」實際發生的樣子：先有版型，機器才知道要裁什麼。</figcaption>
+    </figure>
+    <!-- 來源檔：proto-clip-1.mp4（原 809873850.990438）繡花 -->
+    <figure class="shot">
+      <video src="https://davy10281028.github.io/ruff-blog-preview/assets/proto-clip-1.mp4" controls preload="metadata" playsinline></video>
+      <figcaption><b>② 繡花上機</b>十二針電腦繡花機運轉中。每換一個顏色就要重新對位，車完一組線才換下一根針。</figcaption>
+    </figure>
+    <!-- 來源檔：proto-clip-2.mp4（原 809873851.159553）繡花 -->
+    <figure class="shot">
+      <video src="https://davy10281028.github.io/ruff-blog-preview/assets/proto-clip-2.mp4" controls preload="metadata" playsinline></video>
+      <figcaption><b>③ 繡花上機</b>同一片面料的另一段車縫。鏡頭與條紋都是繡上去的，不是印上去的。印刷會被咬掉，繡線不會。</figcaption>
+    </figure>
+  </div>
+
+  <p class="proc-note">※ 以上為本次聯名拍立得玩具的實際生產紀錄。<strong>公版貼牌沒有裁版與開版這些階段，所以拿不出這些畫面</strong>；這也是最好分辨的方式。</p>
+</div>
+
+<blockquote>
+  <p>把別人的圖印在現成公版上，一週就能上架。<br>把一個主題養成毛孩真的想咬的東西，要花一季。</p>
+  <span class="sig">ruff. 藍夫｜產品團隊</span>
+</blockquote>
+
+<hr class="divider">
+
+<h2><span class="num">3</span>怎麼讓最萌攝影師上工</h2>
+
+<div class="buy">
+  <div class="opt">
+    <span class="pill">訂閱中</span>
+    <h4>什麼都不用做</h4>
+    <p>已經在訂閱的家長，這個月的寵壞盒會直接把聯名拍立得送到你家。藍夫日照常，只是這次多了一台相機。</p>
+  </div>
+  <div class="opt">
+    <span class="pill">還沒訂閱</span>
+    <h4>立即訂閱，從這一彈開始</h4>
+    <p>訂閱免運、隨時可暫停或取消。這一彈售完就絕版，之後補不回來。每個月的快樂與驚喜，寵壞盒都幫你準備好了。</p>
+  </div>
+  <div class="opt">
+    <span class="pill">想先試試 · 或送禮</span>
+    <h4>單盒體驗，每個月都有</h4>
+    <p>不綁約、不用等，單次購買就能收到當月主題盒。買給自己家的毛孩，或是當成禮物送給剛接新成員回家的朋友，都剛好。<strong>NT$989 起。</strong></p>
+  </div>
+</div>
+
+<p>限量、售完絕版，這句話我們每個月都寫，但這一彈是真的比較緊，因為聯名品項的數量不是我們自己說了算。</p>
+
+<div class="cta">
+  <h4>準備好跟最萌攝影師一起出任務了嗎？</h4>
+  <p>ruff. × vacanza 聯名限定 第一彈｜Everyday with you<br>訂閱免運．隨時暫停或取消．100% 滿意保證</p>
+  <a class="btn" href="https://www.ruffgroup.co/">立即訂閱 →</a>
+  <a class="btn ghost" href="/zh-hant/pages/monthly-theme">每月獨家主題</a>
+</div>
+
+<p class="footnote">
+  ※ 「Everyday with you」為 ruff. 藍夫與 vacanza 之聯名企劃；聯名品項之設計與著作權歸各原權利人所有。<br>
+  ※ 本文所述之製造模式（貼牌／公版微調／全原創）為寵物用品產業普遍存在的三種開發流程說明，不指涉任何特定品牌或業者，亦不代表任一模式違反法規。<br>
+  ※ 關於後續月份的客製化程度，本文所述為現階段的產品方向，實際規格仍依各月主題與生產條件調整，不構成對未來商品的保證。<br>
+  ※ 實際販售內容、價格與販售期間以官網商品頁公告為準。<br>
+  ※ #NoBadDays ｜ 每一次開箱，保證尾巴搖。💙
+</p>
+</div>

@@ -1,0 +1,30 @@
+ruff. 藍夫｜9/1 文章 SHOPLINE 欄位對照
+=========================================
+
+【文章標題】
+你的專屬攝影師已上線 📸｜ruff. x vacanza 聯名限定 第一彈
+
+【SEO 標題 / meta title】
+你的專屬攝影師已上線｜ruff. × vacanza 聯名限定第一彈：獨家開發訂製的聯名拍立得玩具
+
+【SEO 說明 / meta description】
+Everyday with you 第一彈登場。ruff. × vacanza 聯名拍立得玩具，按壓出聲、擺拍、拔河都行；獨家開發訂製，外面買不到。從主題概念到開版打樣，這顆玩具是為這一盒生出來的。
+
+【網址 slug】
+everyday-with-you-vol1-camera-toy
+
+【分類 / 標籤】
+每月獨家主題、聯名、客製化玩具、寵壞盒
+
+【封面圖建議】
+拍立得成品主視覺（尚未提供），暫可用產線繡花特寫：
+https://davy10281028.github.io/ruff-blog-preview/assets/proto-embroidery-detail.jpg
+
+【需要上傳到 SHOPLINE 媒體庫的檔案】
+  assets/proto-embroidery-machine.jpg   繡花機上機
+  assets/proto-embroidery-detail.jpg    機身繡花特寫
+  assets/proto-clip-3.mp4               雷射裁切
+  assets/proto-clip-1.mp4               繡花 1
+  assets/proto-clip-2.mp4               繡花 2
+上傳後，把貼上的 HTML 裡 5 個 https://davy10281028.github.io/ruff-blog-preview/assets/xxx
+換成 SHOPLINE 給的網址即可。
