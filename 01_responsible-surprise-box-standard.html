@@ -142,18 +142,6 @@
   .paw p{margin:0 0 12px}
   .paw p:last-child{margin:0}
 
-  /* ---- 第二彈預告 ---- */
-  .teaser{
-    margin:34px 0; padding:26px 26px 22px; border-radius:var(--radius);
-    border:1.5px dashed var(--blue-line); background:var(--blue-soft);
-  }
-  .teaser .tag{
-    display:inline-block; font-size:11.5px; font-weight:900; letter-spacing:.14em;
-    background:var(--orange); color:#fff; padding:4px 11px; border-radius:6px; margin-bottom:12px;
-  }
-  .teaser h4{margin:0 0 8px; font-size:19px; font-weight:900; color:var(--blue-deep)}
-  .teaser p{margin:0; font-size:15.5px; color:var(--blue-deep); line-height:1.85; opacity:.92}
-
   /* ---- 玩具功能三格 ---- */
   .feat{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:24px 0 10px}
   @media(max-width:600px){ .feat{grid-template-columns:1fr} }
@@ -183,15 +171,6 @@
   .shot figcaption b{display:block; color:var(--blue-deep); font-size:14.5px; margin-bottom:2px}
   .shot figcaption b::first-letter{color:var(--orange); font-size:1.15em}
   .proc-note{font-size:13px; color:var(--grey-ink); margin:14px 2px 0; line-height:1.75}
-
-  /* ---- 內容物清單 ---- */
-  .items{list-style:none; margin:24px 0; padding:0; display:grid; gap:12px}
-  .items li{
-    background:#fff; border:1px solid var(--blue-line); border-radius:14px;
-    padding:16px 18px; font-size:16px; line-height:1.8;
-  }
-  .items b{display:block; color:var(--blue-deep); font-size:16.5px; margin-bottom:2px}
-  .items .sub{font-size:14.5px; color:var(--muted)}
 
   /* ---- VS Banner ---- */
   .vs{margin:40px 0 8px}
@@ -325,7 +304,8 @@
     <li><b style="color:#B32424;">⚠ 客製化的說法保留餘地：</b>第 2 節寫的是「<b>九月這一彈是第一次做到完全客製化，之後會盡可能延續但不做絕對承諾</b>」。<b>請勿改成「我們的玩具一直都是全客製化」</b>，那會變成對過往商品的不實陳述，也會綁住之後每一個月。文末已加一行免責：後續月份規格依主題與生產條件調整，不構成對未來商品的保證。</li>
     <li><b>已處理：</b>修版次數已填入（八次）；材質／尺寸說明與零食品項待填已刪除。</li>
     <li><b style="color:#B32424;">⚠ 單盒體驗的價格請核對：</b>「NT$989 起」取自官網訂閱方案頁面，非本次新增資訊。<b>若現行價格已調整，請直接改寫該數字或改成「詳見商品頁」。</b>單盒體驗已改寫為常設方案（每月都有、可自用可送禮），不再寫成「九月限定」。</li>
-    <li><b>待填欄位已全部清空</b>（本篇無紅框殘留）。另已移除「當月主題周邊」列與「『獨家』的三個層級」對照表。</li>
+    <li><b>待填欄位已全部清空</b>（本篇無紅框殘留）。已移除：「『獨家』的三個層級」對照表、「這一盒裡有什麼」內容物清單、第二彈預告卡。</li>
+    <li><b>第二彈 9/16 現僅出現在最上方主題卡</b>（「第一彈 現正登場｜第二彈 09 / 16」）。9/16 另發第二彈專文。</li>
     <li><b>產線影片說明已補：</b>clip-3 為雷射裁切、clip-1 與 clip-2 為繡花。<b>版面按實際工序排序（裁切 → 繡花），與檔名順序不同</b>，對應關係寫在該區的 HTML 註解裡。</li>
     <li><b>用詞：</b>廠商原話為「激光裁剪」，對外文案改用台灣說法「<b>雷射裁切</b>」。請確認全通路統一。</li>
     <li><b>絕不可寫入本文：</b>採購價、抽成 %、訂閱主人數、vacanza 會員數、寄賣／買斷條件等商務條款，皆為內部資訊。</li>
@@ -378,28 +358,7 @@
 
 <p>最重要的一點，是它<strong>#獨家開發訂製、#外面買不到</strong>。</p>
 
-<p>這不是一句行銷話術，而是一個可以驗證的事實：你在蝦皮、淘寶、任何一間寵物店都搜不到同一顆。因為它沒有出現在任何工廠的目錄上，它是為了「Everyday with you」這個主題，從零開版做出來的。</p>
-
-<h3>這一盒裡有什麼</h3>
-
-<ul class="items">
-  <li>
-    <b>ruff. × vacanza 聯名拍立得玩具</b>
-    <span class="sub">本月主角。獨家開發訂製、限量、售完絕版。</span>
-  </li>
-  <li>
-    <b>MIT 天然原肉零食</b>
-    <span class="sub">台灣製造原肉，可依毛孩檔案避開過敏原，邊拍邊流口水的那部分。</span>
-  </li>
-</ul>
-
-<p class="vs-caption">※ 實際內容以官網商品頁公告為準。</p>
-
-<div class="teaser">
-  <span class="tag">COMING 09 / 16</span>
-  <h4>第二彈，九月十六日見</h4>
-  <p>Everyday with you 還有下半場。第二彈的內容我們先不說，只透露一件事：那是給<strong>你</strong>的部分，最萌攝影師出任務，隨行的人也該有配備。<br>9/16 見。</p>
-</div>
+<p>這不是一句行銷話術，而是一個可以驗證的事實：你在蝦皮、淘寶、任何一間寵物店都搜不到同一顆。因為它沒有出現在任何工廠的目錄上，它是專門為了「Everyday with you」這個主題生出來的。</p>
 
 <h2><span class="num">2</span>玩具這件事，我們從這個月開始走比較慢的那條路</h2>
 
