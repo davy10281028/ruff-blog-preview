@@ -15,8 +15,9 @@ body{
   font:14px/1.75 'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif;
   letter-spacing:.02em;
   -webkit-text-size-adjust:100%;
+  display:flex; flex-direction:column;
 }
-.strip{display:grid; gap:14px; align-items:start; padding:1px}
+.strip{display:grid; gap:14px; align-items:start; padding:1px; flex:0 0 auto}
 .strip.two{grid-template-columns:1fr 1fr}
 .strip.three{grid-template-columns:repeat(3,1fr)}
 .card{
@@ -39,7 +40,7 @@ body{
     display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch; padding-bottom:6px;
   }
-  .strip,.strip.two,.strip.three{align-items:stretch}
+  .strip,.strip.two,.strip.three{align-items:stretch; flex:1 1 auto; min-height:0}
   .card{flex:0 0 88%; scroll-snap-align:center; display:flex; flex-direction:column}
   .media{flex:1 1 auto; min-height:0; display:flex}
   .media video,.media img{height:100%; max-height:none}
