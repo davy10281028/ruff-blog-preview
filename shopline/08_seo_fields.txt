@@ -1,7 +1,14 @@
 ruff. 藍夫｜9/16 第二彈文章 SHOPLINE 欄位對照
 ==============================================
 
-貼上的檔案：08_shopline_paste_vol2.html
+★★ 已於 2026/09/16 上線 ★★
+   前台：https://www.ruffgroup.co/blog/posts/everyday-with-you-vol2-accessories
+   後台：admin > 網店設計 > 部落格 > 「把這份陪伴，戴在身上！…」（狀態：發佈）
+   實際貼上的是 09_shopline_live_vol2_with_images.html（含 5 張 SHOPLINE 圖床網址）
+   圖片已上傳至 SHOPLINE，網址見該檔；社群預覽圖＝主圖同一張。
+   尚未設定：分類（店內尚未建立任何文章分類）、相關商品（可掛限定盒與吊牌）。
+
+貼上的檔案：08_shopline_paste_vol2.html（無圖版，保留備查）
 篇幅：約 790 中文字（依指示縮到 1,000 字內，並移除誠實揭露段）／閱讀約 2 分鐘
 貼法：文章編輯器 > 按 <> 進 HTML 模式 > 貼上 > 再按 <> 切回一般模式 > 儲存
 （HTML 模式下不能直接按儲存，SHOPLINE 會擋）
